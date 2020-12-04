@@ -8,7 +8,7 @@ const top10movies = document.querySelector(".new-list");
 function getPosters(){
     let promises = [];
     topMovie.forEach(item => {
-        promises.push(fetch(`http://www.omdbapi.com/?t=${item}&apikey=8b922f05`));
+        promises.push(fetch(`https://www.omdbapi.com/?t=${item}&apikey=8b922f05`));
     });
     return Promise.all(promises);
 }

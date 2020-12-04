@@ -16,7 +16,7 @@ const getmovies = async(movies) =>{
 
 
 const getmoviedetail = async(title)=>{
-    const base = `http://www.omdbapi.com/?t=${title}&apikey=8b922f05`;
+    const base = `https://www.omdbapi.com/?t=${title}&apikey=8b922f05`;
     const response = await fetch(base);
     const data = await response.json();
     return data;
