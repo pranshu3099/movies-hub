@@ -291,6 +291,7 @@ nav li{
 
 @media (max-width:800px){
     body{
+        min-height: 100vh;
         background-size: 100% 100%;
     }
     nav ul{
