@@ -3,7 +3,8 @@ const input = document.querySelector("#text").addEventListener("keyup",run);
 const ul = document.querySelector("#list");
 const poster = document.querySelector("#img");
 const plot = document.querySelector("#plot");
-const actors = document.querySelector("#actors");;
+const actors = document.querySelector("#actors");
+const showNav = document.querySelector(".nav-wrapper");
 const title = document.querySelector("#title");
 const releaseDate = document.querySelector("#release");
 const duration = document.querySelector("#duration");
@@ -15,6 +16,19 @@ const container = document.querySelector(".details-container");
 const favourite = document.querySelector("#fav");
 const topmovies = document.querySelector("#movies");
 const topseries = document.querySelector("#series");
+const hamburger = document.querySelector(".hamburger");
+let hamstate = false;
+hamburger.addEventListener('click', () => {
+    if(!hamstate){
+        showNav.classList.add('show-nav-mobile');
+        hamstate = true;
+    }
+    else{
+        showNav.classList.remove('show-nav-mobile');
+        hamstate = false;
+    }
+});
+
 let isLiked = false;
 let ls;
 function getMovie(){
@@ -195,4 +209,6 @@ function add(e){
 
     
 }
+
+
 

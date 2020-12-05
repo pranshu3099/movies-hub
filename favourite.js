@@ -1,4 +1,17 @@
 document.addEventListener("DOMContentLoaded",checkls);
+const hamburger = document.querySelector(".hamburger");
+const showNav = document.querySelector(".nav-wrapper");
+let hamstate = false;
+hamburger.addEventListener('click', () => {
+    if(!hamstate){
+        showNav.classList.add('show-nav-mobile');
+        hamstate = true;
+    }
+    else{
+        showNav.classList.remove('show-nav-mobile');
+        hamstate = false;
+    }
+});
 function checkls(){
     if(localStorage.getItem("userdata")){
         console.log("welcome");
