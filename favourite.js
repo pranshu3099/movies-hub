@@ -45,10 +45,10 @@ function back(e){
     let y = x.split(" ");
     if(y.length>1){
        y = y.join("$")
-       window.location.href = `/index.html?n=${y}`
+       window.location.href = `index.html?n=${y}`
     }
 
     else{
-        window.location.href = `/index.html?n=${x}`
+        window.location.href = `index.html?n=${x}`
     }
 }
